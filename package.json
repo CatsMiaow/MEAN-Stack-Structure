@@ -1,0 +1,45 @@
+{
+  "name": "MEAN_Stack_Structure",
+  "version": "0.0.0",
+  "description": "Fullstack Javascript Framework",
+  "main": "server.js",
+  "dependencies": {
+    "async": "^0.7.0",
+    "body-parser": "^1.0.2",
+    "compression": "^1.0.1",
+    "cookie-parser": "^1.0.1",
+    "csurf": "^1.1.0",
+    "express": "^4.1.0",
+    "express-session": "^1.0.3",
+    "method-override": "^1.0.0",
+    "mongoose": "^3.8.8",
+    "morgan": "^1.0.0",
+    "multiparty": "^3.2.4",
+    "socket.io": "^0.9.16",
+    "static-favicon": "^1.0.2",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CatsMiaow/MEAN_Stack_Structure"
+  },
+  "keywords": [
+    "MEAN",
+    "Javascript",
+    "MongoDB",
+    "Express",
+    "AngularJS",
+    "NodeJS"
+  ],
+  "author": "Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CatsMiaow/MEAN_Stack_Structure/issues"
+  },
+  "homepage": "https://github.com/CatsMiaow/MEAN_Stack_Structure"
+}

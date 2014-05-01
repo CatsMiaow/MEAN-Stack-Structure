@@ -1,0 +1,24 @@
+h4 Cart
+div
+	table.table.table-condensed.table-hover
+		thead
+			tr
+				th Title
+				th Quantity
+				th Price
+				th Total
+				th Del
+
+		tbody
+		tr(ng-repeat="item in items")
+			td {{item.title}}
+			td: input.form-control.input-sm(type="number" ng-model="item.quantity")
+			td {{item.price | currency}}
+			td {{item.price * item.quantity | currency}}
+			td 
+				button.btn.btn-danger.btn-xs(type="button" ng-click="remove($index)")
+					span.glyphicon.glyphicon-trash
+	p.
+		전체 금액: {{bill.totalCart | currency}}<br/>
+		할인: {{bill.discount | currency}}<br/>
+		결제 금액: {{bill.subtotal | currency}}

@@ -1,0 +1,9 @@
+//- expander.expander(expander-title="{{title}}") {{text}}
+
+div(accordion)
+	div.expander(ng-repeat="expander in expanders" expander="expander.title") {{expander.text}}
+
+script#templateExpander(type="text/ng-template")
+	div
+		div.title(ng-click="toggle()") {{title}}
+		div.body(ng-show="showMe" ng-transclude)

@@ -1,0 +1,40 @@
+h4 Recipe List
+
+p: a(ng-href="#recipe/new") New Recipe
+
+ul.list-unstyled
+	li(ng-repeat="recipe in recipes")
+		p: a(ng-href="#recipe/view/{{recipe._id}}") {{orderNo - $index}} {{recipe.title}}
+
+hr
+
+
+h4 Pagination
+
+div(pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" ng-change="pageChanged()" items-per-page="itemsPerPage")
+br
+div.pagination-sm(pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" max-size="maxSize" ng-change="pageChanged()" items-per-page="itemsPerPage" previous-text="‹" next-text="›" first-text="«" last-text="»")
+br
+div(pagination direction-links="false" boundary-links="true" total-items="totalItems" ng-model="currentPage" max-size="maxSize" ng-change="pageChanged()" items-per-page="itemsPerPage")
+br
+div(pagination direction-links="false" total-items="totalItems" ng-model="currentPage" num-pages="smallnumPages" ng-change="pageChanged()" items-per-page="itemsPerPage")
+
+pre The selected page no: {{currentPage}}
+
+button.btn.btn-info(ng-click="setPage(3)") Set current page to: 3
+
+hr
+
+
+h4 Pager
+div(pager total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage")
+
+hr
+
+
+h4 Limit the maximum visible buttons
+
+div.pagination-sm(pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" boundary-links="true")
+div.pagination-sm(pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" boundary-links="true" rotate="false" num-pages="numPages")
+
+pre Page: {{bigCurrentPage}} / {{numPages}}

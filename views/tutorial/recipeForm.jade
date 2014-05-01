@@ -1,0 +1,38 @@
+h4 Edit Recipe
+
+form.form-horizontal(name="recipeForm" ng-submit="save()")
+  div.form-group
+    label.control-label.col-sm-2(for="title") Title:
+    div.col-sm-10
+      input#title.form-control(type="text" ng-model="recipe.title" focus, required)
+
+  div.form-group
+    label.control-label.col-sm-2(for="description") Description:
+    div.col-sm-10
+      textarea#description.form-control(ng-model="recipe.description")
+
+  div.form-group
+    label.control-label.col-sm-2(for="ingredients") Ingredients:
+    div.col-sm-10(ng-controller="RecipeIngredientsCtrl")
+      p(ng-repeat="ingredient in recipe.ingredients")
+        input.form-control.input-sm.span2.mgr1(type="number" ng-model="ingredient.amount")
+        input.form-control.input-sm.span2.mgr1(type="text" ng-model="ingredient.amountUnits")
+        input.form-control.input-sm.span2.mgr1(type="text" ng-model="ingredient.ingredientName")
+        button.btn.btn-sm.btn-danger(type="button" ng-click="removeIngredient($index)")
+          span.glyphicon.glyphicon-minus
+          |  Delete
+
+      button.btn.btn-primary(type="button" ng-click="addIngredient()")
+        span.glyphicon.glyphicon-plus
+        |  Add
+
+  div.form-group
+    label.control-label.col-sm-2(for="instructions") Instructions:
+    div.col-sm-10
+      textarea#instructions.form-control(ng-model="recipe.instructions")
+
+  hr
+
+  p.text-center
+    button.btn.btn-success.mgr1(type="submit" ng-disabled="recipeForm.$invalid") Save
+    button.btn.btn-danger(type="button" ng-click="remove()" ng-show="recipe._id") Delete

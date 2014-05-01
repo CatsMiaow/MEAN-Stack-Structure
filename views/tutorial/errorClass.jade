@@ -1,0 +1,5 @@
+h4 ErrorClass
+div
+	div(ng-class="{error:isError, warning:isWarning}") {{messageText}}
+	button.btn.btn-xs.btn-default.mgr1(type="button" ng-click="showError()") 에러 시연하기
+	button.btn.btn-xs.btn-default(type="button" ng-click="showWarning()") 경고 시연하기

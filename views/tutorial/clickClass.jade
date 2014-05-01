@@ -1,0 +1,5 @@
+h4 ClickClass
+table
+	tr(ng-repeat="restaurant in directory" ng-click="selectRestaurant($index)" ng-class="{selected:$index==selectedRow}")
+		td {{restaurant.name}}
+		td {{restaurant.cuisine}}
