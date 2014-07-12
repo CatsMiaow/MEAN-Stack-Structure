@@ -12,35 +12,35 @@ html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko")
     link(rel="stylesheet" type="text/css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/blitzer/jquery-ui.css")
     script(type="text/javascript" data-main="system/main" src="vendor/require.js")
   body.body_gray
-
-  <!--[if lte IE 8]>
-  div.alert.alert-danger.text-center(style="width:100%; position:absolute; top:0; left:0; z-index:1040;")
-    button.close(type="button" data-dismiss="alert") &times;
-    | 본 사이트는 <strong>크롬(Chrome)</strong>과 <strong>인터넷 익스플로러(Internet Explorer) 9</strong> 이상 웹 브라우저에 최적화되어 있습니다.
-    | <br/>다음 사이트를 방문하시기 바랍니다. <a href="http://browsehappy.com" target="_blanl">http://browsehappy.com</a>
-  <![endif]-->
-
-  div#container.hide.container.page_width(ng-controller="CommonCtrl")
-    div(error-bar message="errorService.errorMessage")
-    div.page-header
-      h3 AngularJS Tutorial <small loading-bar>Loading...</small>
-    div.row
-      div.col-sm-3
-        ul.list-unstyled
-          li: a(href="#/") 1. Hello, World!
-          li: a(href="#/cart") 2. Cart
-          li: a(href="#/startUp") 3. StartUp
-          li: a(href="#/studentList") 4. StudentList
-          li: a(href="#/toggleMenu") 5. ToggleMenu
-          li: a(href="#/errorClass") 6. ErrorClass
-          li: a(href="#/clickClass") 7. ClickClass
-          li: a(href="#/titleCase") 8. TitleCase
-          li: a(href="#/aMail") 9. A-Mail
-          li: a(href="#/autoFocus") 10. AutoFocus
-          li: a(href="#/userForm") 11. UserForm
-          li: a(href="#/recipe") 12. Recipe, Paging
-          li: a(href="#/accordion") 13. Accordion
-          li: a(href="#/jQuery") 14. jQuery, Upload
-          li: a(href="#/team") 15. TeamList
-          li: a(href="#/socket") 16. Socket.IO
-      div.col-sm-9(ng-view)
+  
+    <!--[if lte IE 8]>
+    div.alert.alert-danger.text-center(style="width:100%; position:absolute; top:0; left:0; z-index:1040;")
+      button.close(type="button" data-dismiss="alert") &times;
+      | 본 사이트는 <strong>크롬(Chrome)</strong>과 <strong>인터넷 익스플로러(Internet Explorer) 9</strong> 이상 웹 브라우저에 최적화되어 있습니다.
+      | <br/>다음 사이트를 방문하시기 바랍니다. <a href="http://browsehappy.com" target="_blanl">http://browsehappy.com</a>
+    <![endif]-->
+    
+    div#container.hide.container.page_width(ng-controller="CommonCtrl")
+      div(error-bar message="errorService.errorMessage")
+      div.page-header
+        h3 AngularJS Tutorial <small loading-bar>Loading...</small>
+      div.row
+        div.col-sm-3
+          ul.list-unstyled
+            li: a(href="#/") 1. Hello, World!
+            li: a(href="#/cart") 2. Cart
+            li: a(href="#/startUp") 3. StartUp
+            li: a(href="#/studentList") 4. StudentList
+            li: a(href="#/toggleMenu") 5. ToggleMenu
+            li: a(href="#/errorClass") 6. ErrorClass
+            li: a(href="#/clickClass") 7. ClickClass
+            li: a(href="#/titleCase") 8. TitleCase
+            li: a(href="#/aMail") 9. A-Mail
+            li: a(href="#/autoFocus") 10. AutoFocus
+            li: a(href="#/userForm") 11. UserForm
+            li: a(href="#/recipe") 12. Recipe, Paging
+            li: a(href="#/accordion") 13. Accordion
+            li: a(href="#/jQuery") 14. jQuery, Upload
+            li: a(href="#/team") 15. TeamList
+            li: a(href="#/socket") 16. Socket.IO
+        div.col-sm-9(ng-view)
