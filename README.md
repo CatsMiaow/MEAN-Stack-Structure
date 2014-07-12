@@ -17,7 +17,7 @@ NodeJS에서 사용된 모듈과 버전은 [package.json](package.json)을 확�
 ## 사용 소스
 
 * [RequireJS](http://requirejs.org)
-* [AngularJS](http://codeigniter.com)
+* [AngularJS](http://angularjs.org)
 * [Bootstrap](http://getbootstrap.com)
 * [jQuery File Upload](http://blueimp.github.io/jQuery-File-Upload)
 * [NProgress](http://ricostacruz.com/nprogress)
