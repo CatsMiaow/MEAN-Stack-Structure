@@ -3,8 +3,8 @@ h4 Recipe List
 p: a(ng-href="#recipe/new") New Recipe
 
 ul.list-unstyled
-	li(ng-repeat="recipe in recipes")
-		p: a(ng-href="#recipe/view/{{recipe._id}}") {{orderNo - $index}} {{recipe.title}}
+  li(ng-repeat="recipe in recipes")
+    p: a(ng-href="#recipe/view/{{recipe._id}}") {{orderNo - $index}} {{recipe.title}}
 
 hr
 

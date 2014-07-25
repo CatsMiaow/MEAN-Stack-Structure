@@ -1,13 +1,13 @@
 h4 jQuery UI/Plugin
 div UI: Datepicker<br />
-	input.form-control.span2(type="text" datepicker ng-model="currentDate" select="updateMyText(date)" maxlength="10", readonly)
-	| {{myText}} - {{currentDate}}
+  input.form-control.span2(type="text" datepicker ng-model="currentDate" select="updateMyText(date)" maxlength="10", readonly)
+  | {{myText}} - {{currentDate}}
 
 hr
 
 div Plugin: FileUpload<br/>{{uploadText}}
-	input.form-control(type="file" name="image" fileupload multiple data-url="/upload/image" done="uploadFinished(e, data)" accept="image/*")
+  input.form-control(type="file" name="image" fileupload multiple data-url="/upload/image" done="uploadFinished(e, data)" accept="image/*")
 
-	ul.list-inline
-		li.span2(ng-repeat="image in images")
-			a(ng-href="/data/temp/{{image}}" target="_blank"): img.img-thumbnail(ng-src="/data/temp/{{image}}" alt="")
+  ul.list-inline
+    li.span2(ng-repeat="image in images")
+      a(ng-href="/data/temp/{{image}}" target="_blank"): img.img-thumbnail(ng-src="/data/temp/{{image}}" alt="")

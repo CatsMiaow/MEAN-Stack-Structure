@@ -1,10 +1,10 @@
 h4 A-Mail
 table
-	tr
-		td: strong 발신자
-		td: strong 제목
-		td: strong 일자
-	tr(ng-repeat="message in messages")
-		td {{message.sender}}
-		td: a(ng-href="#/aMail/{{message.id}}") {{message.subject}}
-		td {{message.date}}
+  tr
+    td: strong 발신자
+    td: strong 제목
+    td: strong 일자
+  tr(ng-repeat="message in messages")
+    td {{message.sender}}
+    td: a(ng-href="#/aMail/{{message.id}}") {{message.subject}}
+    td {{message.date}}

@@ -1,17 +1,17 @@
 h4 UserForm
 form(name="addUserForm")
-	p(ng-show="message") {{message}}
-	
-	p(ng-class="{'has-error': addUserForm.first.$invalid}") 이름:
-		input.form-control.input-sm.span2(type="text" name="first" ng-model="user.first", required)
+  p(ng-show="message") {{message}}
+  
+  p(ng-class="{'has-error': addUserForm.first.$invalid}") 이름:
+    input.form-control.input-sm.span2(type="text" name="first" ng-model="user.first", required)
 
-	p(ng-class="{'has-error': addUserForm.last.$invalid}") 성씨:
-		input.form-control.input-sm.span2(type="text" name="last" ng-model="user.last", required)
+  p(ng-class="{'has-error': addUserForm.last.$invalid}") 성씨:
+    input.form-control.input-sm.span2(type="text" name="last" ng-model="user.last", required)
 
-	p(ng-class="{'has-error': addUserForm.email.$invalid}") 이메일:
-		input.form-control.input-sm.span3(type="email" name="email" ng-model="user.email", required)
-	
-	p(ng-class="{'has-error': addUserForm.age.$invalid}") 나이:
-		input.form-control.input-sm.span2(type="number" name="age" ng-model="user.age" ng-maxlength="3" ng-minlength="1", required)
-	
-	button.btn.btn-xs.btn-default(type="submit" ng-click="addUser()" ng-disabled="!addUserForm.$valid") 전송
+  p(ng-class="{'has-error': addUserForm.email.$invalid}") 이메일:
+    input.form-control.input-sm.span3(type="email" name="email" ng-model="user.email", required)
+  
+  p(ng-class="{'has-error': addUserForm.age.$invalid}") 나이:
+    input.form-control.input-sm.span2(type="number" name="age" ng-model="user.age" ng-maxlength="3" ng-minlength="1", required)
+  
+  button.btn.btn-xs.btn-default(type="submit" ng-click="addUser()" ng-disabled="!addUserForm.$valid") 전송

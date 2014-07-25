@@ -1,19 +1,19 @@
 h4 Hello, World!
 div
-	input.form-control.input-sm(ng-model="greeting.text")
-	span.help-block {{greeting.text}}, World!
+  input.form-control.input-sm(ng-model="greeting.text")
+  span.help-block {{greeting.text}}, World!
 
-	strong dataBind
-	div {{myHTMLContent}} <br />
+  strong dataBind
+  div {{myHTMLContent}} <br />
 
-	strong ngBind
-	div(ng-bind="myHTMLContent") <br />
+  strong ngBind
+  div(ng-bind="myHTMLContent") <br />
 
-	strong ngBindHtml
-	div(ng-bind-html="myHTMLContent")
+  strong ngBindHtml
+  div(ng-bind-html="myHTMLContent")
 
-	strong ngBindHtmlUnsafe
-	div(ng-bind-html="myUnsafeHTMLContent")
+  strong ngBindHtmlUnsafe
+  div(ng-bind-html="myUnsafeHTMLContent")
 
-	strong ngBindHtmlLinky
-	div(ng-bind-html="myHTMLContent | linky") <br />
+  strong ngBindHtmlLinky
+  div(ng-bind-html="myHTMLContent | linky") <br />

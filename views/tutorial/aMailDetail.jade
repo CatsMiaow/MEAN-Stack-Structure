@@ -1,13 +1,13 @@
 h4 A-Mail
 div
-	strong 제목: 
-	| {{message.subject}}
+  strong 제목: 
+  | {{message.subject}}
 div <strong>발신자:</strong> {{message.sender}}
 div <strong>일자:</strong> {{message.date}}
 
 div
-	strong 수신자: 
-	span(ng-repeat="recipient in message.recipients") {{recipient}}
+  strong 수신자: 
+  span(ng-repeat="recipient in message.recipients") {{recipient}}
 
 div {{message.message}}
 

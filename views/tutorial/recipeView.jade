@@ -5,13 +5,13 @@ h4 Ingredients
 span(ng-show="recipe.ingredients.length == 0") No Ingredients
 
 ul.list-unstyled(ng-hide="recipe.ingredients.length == 0")
-	li(ng-repeat="ingredient in recipe.ingredients")
-		span {{ingredient.amount}}
-		span {{ingredient.amountUnits}}
-		span {{ingredient.ingredientName}}
+  li(ng-repeat="ingredient in recipe.ingredients")
+    span {{ingredient.amount}}
+    span {{ingredient.amountUnits}}
+    span {{ingredient.ingredientName}}
 
 h4 Instructions
 p {{recipe.instructions}}
 
 form.form-horizontal(ng-submit="edit()")
-	button.btn.btn-primary(type="submit") Edit
+  button.btn.btn-primary(type="submit") Edit

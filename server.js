@@ -7,26 +7,26 @@ var config   = require('./server/config/env')
 
 /*<MongoDB 설정>*/
 var connectMongoDB = function () {
-	if (config.env === 'development')
-		mongoose.connect(config.db.uri);
-	else
-		mongoose.connect(config.db.uri, config.db.user, config.db.password);
+    if (config.env === 'development')
+        mongoose.connect(config.db.uri);
+    else
+        mongoose.connect(config.db.uri, config.db.user, config.db.password);
 };
 
 mongoose.connection.on('connected', function () {
-	console.log('Mongodb Connected', Date());
-	console.log('Running Mongoose Version '+mongoose.version);
+    console.log('Mongodb Connected', Date());
+    console.log('Running Mongoose Version '+mongoose.version);
 });
 
 // Error Handler
 mongoose.connection.on('error', function (err) {
-	console.log(err);
+    console.log(err);
 });
 
 // Reconnect when Closed
 mongoose.connection.on('disconnected', function () {
-	console.log('Mongoose Reconnect!!');
-	connectMongoDB();
+    console.log('Mongoose Reconnect!!');
+    connectMongoDB();
 });
 
 connectMongoDB();

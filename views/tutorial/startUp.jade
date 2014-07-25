@@ -1,9 +1,9 @@
 h4 StartUp
 form(ng-submit="requestFunding()")
-	p
-		| 창업 예산: 
-		input.form-control.input-sm.span2(ng-change="computeNeeded()" ng-model="startingEstimate")
-		|  권장 자본금: {{needed | currency:"KRW₩"}}
+  p
+    | 창업 예산: 
+    input.form-control.input-sm.span2(ng-change="computeNeeded()" ng-model="startingEstimate")
+    |  권장 자본금: {{needed | currency:"KRW₩"}}
 
-	button.btn.btn-xs.btn-default.mgr1(type="submit") 저의 창업에 투자해주세요!
-	button.btn.btn-xs.btn-default(type="button" ng-click="reset()") 초기화
+  button.btn.btn-xs.btn-default.mgr1(type="submit") 저의 창업에 투자해주세요!
+  button.btn.btn-xs.btn-default(type="button" ng-click="reset()") 초기화

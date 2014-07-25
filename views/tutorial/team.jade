@@ -1,41 +1,41 @@
 div.row
-	div.col-md-4(ng-controller="TeamFilterCtrl")
-		form.form-horizontal
-			div.form-group
-				label.col-sm-3.control-label(for="searchTextBox") 검색
-				div.col-sm-9
-					input#searchTextBox.form-control(type="text" ng-model="filterService.searchText")
+  div.col-md-4(ng-controller="TeamFilterCtrl")
+    form.form-horizontal
+      div.form-group
+        label.col-sm-3.control-label(for="searchTextBox") 검색
+        div.col-sm-9
+          input#searchTextBox.form-control(type="text" ng-model="filterService.searchText")
 
-			div.form-group
-				label.col-sm-3.control-label(for="sportComboBox") 종목
-				div.col-sm-9
-					select#sportComboBox.form-control(ng-model="filterService.activeFilters.sport")
-						option(value="") 전체
-						option(ng-repeat="sport in ['Basketball', 'Hockey', 'Football']") {{sport}}
+      div.form-group
+        label.col-sm-3.control-label(for="sportComboBox") 종목
+        div.col-sm-9
+          select#sportComboBox.form-control(ng-model="filterService.activeFilters.sport")
+            option(value="") 전체
+            option(ng-repeat="sport in ['Basketball', 'Hockey', 'Football']") {{sport}}
 
-			div.form-group
-				label.col-sm-3.control-label(for="cityComboBox") 시
-				div.col-sm-9
-					select#cityComboBox.form-control(ng-model="filterService.activeFilters.city")
-						option(value="") 전체
-						option(ng-repeat="city in ['Dallas', 'Los Angeles', 'Boston', 'New York']") {{city}}
+      div.form-group
+        label.col-sm-3.control-label(for="cityComboBox") 시
+        div.col-sm-9
+          select#cityComboBox.form-control(ng-model="filterService.activeFilters.city")
+            option(value="") 전체
+            option(ng-repeat="city in ['Dallas', 'Los Angeles', 'Boston', 'New York']") {{city}}
 
-			div.checkbox: label
-				input(type="checkbox" ng-model="filterService.activeFilters.featured" ng-false-value="")
-				| 수훈
-	
-	div.col-md-8(ng-controller="TeamListCtrl")
-		table.table.table-condensed.table-hover
-			thead
-			tr
-				th 팀명
-				th 종목
-				th 시
-				th 수훈
+      div.checkbox: label
+        input(type="checkbox" ng-model="filterService.activeFilters.featured" ng-false-value="")
+        | 수훈
+  
+  div.col-md-8(ng-controller="TeamListCtrl")
+    table.table.table-condensed.table-hover
+      thead
+      tr
+        th 팀명
+        th 종목
+        th 시
+        th 수훈
 
-			tbody
-			tr(ng-repeat="team in teamsList | filter:filterService.activeFilters | filter:filterService.searchText")
-				td {{team.name}}
-				td {{team.sport}}
-				td {{team.city}}
-				td {{team.featured}}
+      tbody
+      tr(ng-repeat="team in teamsList | filter:filterService.activeFilters | filter:filterService.searchText")
+        td {{team.name}}
+        td {{team.sport}}
+        td {{team.city}}
+        td {{team.featured}}
