@@ -3,11 +3,11 @@
 var controller = require('../controllers/socket.io');
 
 module.exports = function(io) {
-    io.configure(function() {
-       io.disable('log');
+    io.use(function() {
+
     });
 
-    io.sockets.on('connection', function(socket) {
+    io.on('connection', function(socket) {
         console.log('Socket Connect: '+socket.id);
 
         socket.on('message', function(message, callback) {

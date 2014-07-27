@@ -1,6 +1,5 @@
 'use strict';
 
-
 var config   = require('./server/config/env')
   , mongoose = require('mongoose');
 
@@ -39,8 +38,8 @@ console.log('Current Environment: ', config.env);
 // Express, Models, Routes
 var app = require('./bootstrap')();
 
-// Socket.IO, 컨트롤러에서 사용하기 위해 GLOBAL 변수로 설정
-var io = require('socket.io').listen(app.listen(config.port, function() {
+// Socket.IO
+var io = require('socket.io')(app.listen(config.port, function() {
     console.log('Express server listening on port ' + config.port);
 }));
 

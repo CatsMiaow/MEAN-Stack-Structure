@@ -1,6 +1,6 @@
 'use strict';
 
-define(['services/_services', 'NProgress'], function(services, NProgress) {
+define(['services/_services', 'NProgress', 'SocketIO'], function(services, NProgress, io) {
 
     // 에러메시지 관리
     services.factory('ErrorService', function() {
@@ -101,7 +101,7 @@ define(['services/_services', 'NProgress'], function(services, NProgress) {
 
     // Socket.IO
     services.factory('Socket', ['$rootScope', function($rootScope) {
-        var socket = io.connect();
+        var socket = io();
 
         return {
             on: function(eventName, callback) {
