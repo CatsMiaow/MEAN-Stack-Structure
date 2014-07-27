@@ -4,7 +4,7 @@ var express = require('express')
   , appPath = process.cwd();
 
 /*<Express 미들웨어>*/
-var favicon        = require('static-favicon')
+var favicon        = require('serve-favicon')
   , morgan         = require('morgan') // logger
   , bodyParser     = require('body-parser')
   , compress       = require('compression')
@@ -23,7 +23,7 @@ module.exports = function(app) {
     app.set('view engine', 'jade');
 
     app.use(favicon(appPath + '/public/favicon.ico'));
-    app.use(morgan('dev'));
+    // app.use(morgan('dev'));
     app.use(compress({
         filter: function(req, res) {
             return (/json|text|javascript|css/).test(res.getHeader('Content-Type'));
@@ -31,9 +31,9 @@ module.exports = function(app) {
     }));
     app.use(methodOverride());
     app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded());
+    app.use(bodyParser.urlencoded({ extended:true }));
     app.use(cookieParser());
-    app.use(session({ secret:'Meow Miaow' }));
+    app.use(session({ secret:'Meow Miaow', resave:true, saveUninitialized:true }));
     // app.use(session({ secret: 'keyboard cat', key: 'sid', cookie: { secure: true }}))
     app.use(csrf());
     app.use(express.static(appPath + '/public'));
