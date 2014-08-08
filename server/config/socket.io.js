@@ -3,8 +3,10 @@
 var controller = require('../controllers/socket.io');
 
 module.exports = function(io) {
-    io.use(function() {
+    io.use(function(socket, next) {
+        // 기타 설정
 
+        next();
     });
 
     io.on('connection', function(socket) {
