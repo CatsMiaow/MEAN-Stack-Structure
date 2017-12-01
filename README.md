@@ -1,7 +1,7 @@
 ## MEAN, Fullstack Javascript Framework
 
 * 테스티드 <http://www.tested.co.kr>
-* 샘플 사이트 <http://mean.tested.co.kr>
+* ~~샘플 사이트 <http://mean.tested.co.kr>~~
 * MEAN Stack에 대한 소개는 [링크](http://mobicon.tistory.com/384) 확인
 
 
